@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
