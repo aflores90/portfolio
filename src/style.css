@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 * {
-  font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   background-color: black;
   color: white;
 }
