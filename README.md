@@ -34,6 +34,8 @@ portfolio/
 ├── package.json     # Dependencias del proyecto
 ├── tailwind.config.js # Configuración de TailwindCSS
 └── vite.config.ts   # Configuración de Vite para desarrollo
+```
+
 📦 Instalación y uso
 Clona este repositorio:
 bash
@@ -74,10 +76,14 @@ markdown
 Copy code
 
 ### Puntos clave del `README`:
+
 1. **Estructura clara y profesional**: Muestra rápidamente de qué trata el proyecto y cómo usarlo.
 2. **Instrucciones de instalación y uso**: Específicas y detalladas para facilitar la contribución o pruebas locales.
 3. **Características y tecnologías**: Resaltan el alcance del proyecto y tus habilidades.
 4. **Próximas mejoras**: Muestra tu intención de crecimiento y mantenimiento continuo.
 
 Si tienes algo adicional que quieras destacar, como una sección de screenshots o un showcase, puedes incluirlo pa
+
+```
+
 ```
