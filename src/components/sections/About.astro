@@ -1,0 +1,39 @@
+---
+import Badge from '@/components/Badge.astro'
+import LinkedInIcon from '@/icons/LinkedIn.astro'
+import GithubIcon from '@/icons/Github.astro'
+import InstagramIcon from '@/icons/Instagram.astro'
+import Email from '@/icons/Email.astro'
+import SocialPill from '@/components/SocialPill.astro'
+---
+
+<h1 class="text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
+  Hey, soy Alexander
+  <a
+    class="flex justify-center items-center"
+    href="https://www.linkedin.com/in/afloresc9/"
+    rel="noopener"
+    target="_blank"
+  >
+    <Badge>Disponible para trabajar</Badge>
+  </a>
+</h1>
+<h2 class="text-xl lg:text-2xl text-wrap">
+  <span class="text-yellow-200/90">+10 años de experiencia.</span> Desarrollador
+  web y aplicaciones móviles. De Guatemala, Guatemala. Especializado en crear
+  <span class="text-blue-200">soluciones</span> personalizadas.
+</h2>
+<nav class="flex flex-wrap gap-4 mt-7">
+  <SocialPill href="https://www.linkedin.com/in/afloresc9/">
+    <LinkedInIcon class="size-6" /> LinkedIn
+  </SocialPill>
+  <SocialPill href="https://github.com/aflores90">
+    <GithubIcon class="size-6" /> Github
+  </SocialPill>
+  <SocialPill href="https://www.instagram.com/afloresc9/">
+    <InstagramIcon class="size-6" /> Instagram
+  </SocialPill>
+  <SocialPill href="https://www.instagram.com/afloresc9/">
+    <Email class="size-6" /> eafloresc9@gmail.com
+  </SocialPill>
+</nav>

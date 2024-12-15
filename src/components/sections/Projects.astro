@@ -1,0 +1,101 @@
+---
+import CodeIcon from '@/icons/Code.astro'
+import type { Project } from '@/types/projects'
+import type { Tag } from '@/types/tags'
+import HtmlIcon from '@/icons/Html.astro'
+import VueJsIcon from '@/icons/VueJs.astro'
+import TailwindIcon from '@/icons/Tailwind.astro'
+import FirebaseIcon from '@/icons/Firebase.astro'
+import PhpIcon from '@/icons/Php.astro'
+import JavascriptIcon from '@/icons/Javascript.astro'
+import CssIcon from '@/icons/Css.astro'
+
+const TAGS: Record<string, Tag> = {
+  HTML: {
+    name: 'HTML',
+    color: 'bg-[#E44D26] text-white',
+    icon: HtmlIcon,
+  },
+  TAILWIND: {
+    name: 'Tailwind',
+    color: 'bg-[#06B6D4] text-white',
+    icon: TailwindIcon,
+  },
+  VUE: {
+    name: 'VueJs',
+    color: 'bg-[#42B883] text-white',
+    icon: VueJsIcon,
+  },
+  FIREBASE: {
+    name: 'Firebase',
+    color: 'bg-[#FFCA28] text-black',
+    icon: FirebaseIcon,
+  },
+  PHP: {
+    name: 'PHP',
+    color: 'bg-[#777BB4] text-white',
+    icon: PhpIcon,
+  },
+  JAVASCRIPT: {
+    name: 'Javascript',
+    color: 'bg-[#F7DF1E] text-black',
+    icon: JavascriptIcon,
+  },
+  CSS: {
+    name: 'CSS',
+    color: 'bg-[#264DE4] text-white',
+    icon: CssIcon,
+  },
+}
+
+const PROJECTS: Project[] = [
+  {
+    title: 'Gasolinera Total Guatemala',
+    description: 'Página administrativa de Gasolinera Total.',
+    link: 'https://gasolineratotal.com.gt/',
+    github: 'https://github.com/aflores90/gasolinera-total',
+    image: '/projects/gasolineratotal.webp',
+    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.TAILWIND],
+  },
+  {
+    title: 'Hotel Santana Petén',
+    description: 'Página administrativa de Gasolinera Total.',
+    link: 'https://hsantanapeten.com/',
+    image: '/projects/hotelsantana.webp',
+    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.PHP],
+  },
+]
+---
+
+<h2 class="text-2xl mb-6 font-semibold flex gap-x-3 items-center">
+  <CodeIcon class="size-7" /> Proyectos
+</h2>
+{
+  PROJECTS.map(({ title, description, image, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-100 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row flex-wrap">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs py-2 px-3 ${tag.color}`}
+            >
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      {image ? (
+        <img
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Capotura de pantalla del proyecto ${image}`}
+        />
+      ) : (
+        ''
+      )}
+    </article>
+  ))
+}

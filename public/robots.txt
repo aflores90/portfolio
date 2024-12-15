@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /README.md 
+Disallow: /config/
+
+Sitemap: https://www.tu-dominio.com/sitemap.xml

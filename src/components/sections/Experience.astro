@@ -1,0 +1,57 @@
+---
+import ExperienceItem from '@/components/ExperienceItem.astro'
+import type { Experience } from '@/types/experience'
+import AwardIcon from '@/icons/Award.astro'
+
+const EXPERIENCE: Experience[] = [
+  {
+    date: 'December 2022',
+    title: 'Senior Software Engineer - Payjoy Inc',
+    description: 'Encargado de desarrollar y dirigir al equipo',
+    link: 'https://www.payjoy.com/',
+  },
+  {
+    date: 'December 2022',
+    title: 'Senior Software Engineer - Payjoy Inc',
+    description: 'Encargado de desarrollar y dirigir al equipo',
+    link: 'https://www.payjoy.com/',
+  },
+  {
+    date: 'December 2022',
+    title: 'Senior Software Engineer - Payjoy Inc',
+    description: 'Encargado de desarrollar y dirigir al equipo',
+    link: 'https://www.payjoy.com/',
+  },
+  {
+    date: 'December 2022',
+    title: 'Senior Software Engineer - Payjoy Inc',
+    description: 'Encargado de desarrollar y dirigir al equipo',
+    link: 'https://www.payjoy.com/',
+  },
+  {
+    date: 'December 2022',
+    title: 'Senior Software Engineer - Payjoy Inc',
+    description: 'Encargado de desarrollar y dirigir al equipo',
+    link: 'https://www.payjoy.com/',
+  },
+  {
+    date: 'December 2022',
+    title: 'Senior Software Engineer - Payjoy Inc',
+    description: 'Encargado de desarrollar y dirigir al equipo',
+    link: 'https://www.payjoy.com/',
+  },
+]
+---
+
+<h2 class="text-2xl mb-6 font-semibold flex gap-x-3 items-center">
+  <AwardIcon class="size-7" />Experiencia Laboral
+</h2>
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCE.map((experience: Experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem experience={experience} />
+      </li>
+    ))
+  }
+</ol>
