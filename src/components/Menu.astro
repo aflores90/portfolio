@@ -1,9 +1,20 @@
-<nav
-  class="lg:flex md:flex flex-row lg:gap-x-10 md:gap-x-7 opacity-90 sm:hidden"
->
-  <a href="#home">Inicio</a>
-  <a href="#about">Sobre mí</a>
-  <a href="#experience">Experiencia</a>
-  <a href="#projects">Proyectos</a>
-  <a href="#contact">Contacto</a>
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+---
+
+<nav class="lg:flex md:flex flex-row gap-x-7 opacity-90 hidden sm:flex">
+  <a href={translatePath('/#home')}>{t('nav.home')}</a>
+  <a href={translatePath('/#about')}>{t('nav.about')}</a>
+  <a href={translatePath('/#experience')}>{t('nav.experience')}</a>
+  <a href={translatePath('/#projects')}>{t('nav.projects')}</a>
+  <a href={translatePath('/#contact')}>{t('nav.contact')}</a>
+  <a href={translatePath('/blog')}>{t('nav.blog')}</a>
 </nav>

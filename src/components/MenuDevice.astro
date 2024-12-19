@@ -2,7 +2,7 @@
 import Award from '../icons/Award.astro'
 ---
 
-<footer class="lg:hidden md:hidden sm:flex">
+<footer>
   <div
     class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200"
   >
@@ -86,3 +86,15 @@ import Award from '../icons/Award.astro'
     </nav>
   </div>
 </footer>
+<style>
+  @media (max-width: 640px) {
+    footer {
+      display: flex;
+    }
+  }
+  @media (min-width: 641px) {
+    footer {
+      display: none;
+    }
+  }
+</style>

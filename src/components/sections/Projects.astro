@@ -9,6 +9,7 @@ import FirebaseIcon from '@/icons/Firebase.astro'
 import PhpIcon from '@/icons/Php.astro'
 import JavascriptIcon from '@/icons/Javascript.astro'
 import CssIcon from '@/icons/Css.astro'
+import LaravelIcon from '../../icons/Laravel.astro'
 
 const TAGS: Record<string, Tag> = {
   HTML: {
@@ -46,6 +47,11 @@ const TAGS: Record<string, Tag> = {
     color: 'bg-[#264DE4] text-white',
     icon: CssIcon,
   },
+  LARAVEL: {
+    name: 'Laravel',
+    color: 'bg-[#264DE4] text-white',
+    icon: LaravelIcon,
+  },
 }
 
 const PROJECTS: Project[] = [
@@ -62,7 +68,7 @@ const PROJECTS: Project[] = [
     description: 'Página administrativa de Gasolinera Total.',
     link: 'https://hsantanapeten.com/',
     image: '/projects/hotelsantana.webp',
-    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.PHP],
+    tags: [TAGS.VUE, TAGS.FIREBASE, TAGS.PHP, TAGS.LARAVEL],
   },
 ]
 ---
@@ -72,8 +78,9 @@ const PROJECTS: Project[] = [
 </h2>
 {
   PROJECTS.map(({ title, description, image, tags }) => (
-    <article>
+    <article class="mt-5">
       <h3 class="text-2xl font-semibold text-yellow-100 mb-2">{title}</h3>
+
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row flex-wrap">
         {tags.map((tag) => (

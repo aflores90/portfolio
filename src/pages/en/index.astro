@@ -1,0 +1,25 @@
+---
+import About from '@/components/sections/About.astro'
+import Experience from '@/components/sections/Experience.astro'
+import Layout from '@/layouts/Layout.astro'
+import MenuDevice from '@/components/MenuDevice.astro'
+import Projects from '@/components/sections/Projects.astro'
+---
+
+<Layout
+  title="Portfolio de Alexander Flores - Desarrollador y Programador Web con 10 años de experiencia"
+  description="Desarrollador senior especializado en PHP, TypeScript y Vue.js con experiencia en proyectos frontend y backend. Apasionado por el código limpio, revisiones efectivas y liderazgo técnico. Busco crear soluciones innovadoras y colaborar en equipos dinámicos. Explorando el camino hacia roles de tech lead y manager mientras impulso la calidad de software y el crecimiento del equipo. ¡Conoce más sobre mi experiencia y proyectos destacados!"
+>
+  <main class="container mx-auto px-6">
+    <section id="about" class="w-full lg:w-[840px] pt-44 pb-24">
+      <About />
+    </section>
+    <section id="experience" class="w-full lg:w-[840px] pb-16">
+      <Experience />
+    </section>
+    <section id="projects" class="w-full lg:w-[840px] pb-44">
+      <Projects />
+    </section>
+  </main>
+  <MenuDevice />
+</Layout>
